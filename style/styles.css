@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url(../assets/fonts/static/Figtree-SemiBold.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url(../assets/fonts/static/Figtree-ExtraBold.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+:root {
+    --yellow-color: hsl(47, 88%, 63%);
+    --white-color: hsl(0, 0%, 100%);
+    --gray-500-color: hsl(0, 0%, 42%);
+    --gray-950-color:  hsl(0, 0%, 7%);
+
+    --paragraph-font-size: 16px;
+    --bold-weight: 500;
+    --extra-bold-weight: 800;
+}
+
+body {
+    font-family: 'Figtree', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow-color);
+    /* box-sizing: border-box; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: var(--paragraph-font-size);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--white-color);
+    width: 75%;
+    max-width: 340px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px var(--gray-950-color);
+}
+
+.container > img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.container .container-date {
+    color: var(--gray-950-color);
+}
+
+.container .container-date > div {
+    display: inline-block;
+    background-color: var(--yellow-color);
+    font-weight: var(--extra-bold-weight);
+    padding: 8px 18px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.container .container-date > p {
+    font-weight: var(--bold-weight);
+}
+
+.container .info > h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+}
+
+.container .info > h3:hover {
+    color: var(--yellow-color);
+}
+
+.container .info > p {
+    font-weight: var(--medium-weight);
+    color: var(--gray-500-color);
+    line-height: 1.4rem;
+}
+
+.container .image-avatar {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: center;
+    font-weight: var(--extra-bold-weight);
+}
+
+.container .image-avatar > img {
+    max-width: 30px;
+}
+
+/* Media query */
+
+@media screen and (max-width: 341px) {
+    .container .info > h3 {
+        font-size: 18px;
+    }
+}
